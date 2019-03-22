@@ -1,0 +1,434 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.webdatasem-project#"
+     xml:base="http://www.webdatasem-project"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.webdatasem-project"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.webdatasem-project#has -->
+
+    <owl:ObjectProperty rdf:about="http://www.webdatasem-project#has">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.webdatasem-project#is"/>
+        <rdfs:domain rdf:resource="http://www.webdatasem-project#Movie"/>
+        <rdfs:range rdf:resource="http://www.webdatasem-project#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.webdatasem-project#hasActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.webdatasem-project#hasActor">
+        <rdfs:subPropertyOf rdf:resource="http://www.webdatasem-project#has"/>
+        <owl:inverseOf rdf:resource="http://www.webdatasem-project#isActorOf"/>
+        <rdfs:domain rdf:resource="http://www.webdatasem-project#Movie"/>
+        <rdfs:range rdf:resource="http://www.webdatasem-project#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.webdatasem-project#hasDirector -->
+
+    <owl:ObjectProperty rdf:about="http://www.webdatasem-project#hasDirector">
+        <rdfs:subPropertyOf rdf:resource="http://www.webdatasem-project#has"/>
+        <owl:inverseOf rdf:resource="http://www.webdatasem-project#isDirectorOf"/>
+        <rdfs:domain rdf:resource="http://www.webdatasem-project#Movie"/>
+        <rdfs:range rdf:resource="http://www.webdatasem-project#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.webdatasem-project#hasGender -->
+
+    <owl:ObjectProperty rdf:about="http://www.webdatasem-project#hasGender">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.webdatasem-project#Person"/>
+        <rdfs:range rdf:resource="http://www.webdatasem-project#Gender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.webdatasem-project#hasGenre -->
+
+    <owl:ObjectProperty rdf:about="http://www.webdatasem-project#hasGenre">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.webdatasem-project#Movie"/>
+        <rdfs:range rdf:resource="http://www.webdatasem-project#Genre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.webdatasem-project#hasWriter -->
+
+    <owl:ObjectProperty rdf:about="http://www.webdatasem-project#hasWriter">
+        <rdfs:subPropertyOf rdf:resource="http://www.webdatasem-project#has"/>
+        <owl:inverseOf rdf:resource="http://www.webdatasem-project#isWriterOf"/>
+        <rdfs:domain rdf:resource="http://www.webdatasem-project#Movie"/>
+        <rdfs:range rdf:resource="http://www.webdatasem-project#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.webdatasem-project#is -->
+
+    <owl:ObjectProperty rdf:about="http://www.webdatasem-project#is">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.webdatasem-project#Person"/>
+        <rdfs:range rdf:resource="http://www.webdatasem-project#Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.webdatasem-project#isActorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.webdatasem-project#isActorOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.webdatasem-project#is"/>
+        <rdfs:domain rdf:resource="http://www.webdatasem-project#Person"/>
+        <rdfs:range rdf:resource="http://www.webdatasem-project#Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.webdatasem-project#isDirectorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.webdatasem-project#isDirectorOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.webdatasem-project#is"/>
+        <rdfs:domain rdf:resource="http://www.webdatasem-project#Person"/>
+        <rdfs:range rdf:resource="http://www.webdatasem-project#Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.webdatasem-project#isWriterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.webdatasem-project#isWriterOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.webdatasem-project#is"/>
+        <rdfs:domain rdf:resource="http://www.webdatasem-project#Person"/>
+        <rdfs:range rdf:resource="http://www.webdatasem-project#Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.webdatasem-project#age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.webdatasem-project#age">
+        <rdfs:domain rdf:resource="http://www.webdatasem-project#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.webdatasem-project#country -->
+
+    <owl:DatatypeProperty rdf:about="http://www.webdatasem-project#country">
+        <rdfs:domain rdf:resource="http://www.webdatasem-project#Movie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.webdatasem-project#language -->
+
+    <owl:DatatypeProperty rdf:about="http://www.webdatasem-project#language">
+        <rdfs:domain rdf:resource="http://www.webdatasem-project#Movie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.webdatasem-project#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.webdatasem-project#name">
+        <rdfs:domain rdf:resource="http://www.webdatasem-project#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.webdatasem-project#nationality -->
+
+    <owl:DatatypeProperty rdf:about="http://www.webdatasem-project#nationality">
+        <rdfs:domain rdf:resource="http://www.webdatasem-project#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.webdatasem-project#title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.webdatasem-project#title">
+        <rdfs:domain rdf:resource="http://www.webdatasem-project#Movie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.webdatasem-project#year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.webdatasem-project#year">
+        <rdfs:domain rdf:resource="http://www.webdatasem-project#Movie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.webdatasem-project#Actor -->
+
+    <owl:Class rdf:about="http://www.webdatasem-project#Actor">
+        <rdfs:subClassOf rdf:resource="http://www.webdatasem-project#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.webdatasem-project#Director -->
+
+    <owl:Class rdf:about="http://www.webdatasem-project#Director">
+        <rdfs:subClassOf rdf:resource="http://www.webdatasem-project#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.webdatasem-project#Gender -->
+
+    <owl:Class rdf:about="http://www.webdatasem-project#Gender">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.webdatasem-project#Female"/>
+                    <rdf:Description rdf:about="http://www.webdatasem-project#Male"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.webdatasem-project#Genre -->
+
+    <owl:Class rdf:about="http://www.webdatasem-project#Genre">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.webdatasem-project#Action"/>
+                    <rdf:Description rdf:about="http://www.webdatasem-project#Comedy"/>
+                    <rdf:Description rdf:about="http://www.webdatasem-project#Crime"/>
+                    <rdf:Description rdf:about="http://www.webdatasem-project#Drama"/>
+                    <rdf:Description rdf:about="http://www.webdatasem-project#Thriller"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.webdatasem-project#Movie -->
+
+    <owl:Class rdf:about="http://www.webdatasem-project#Movie"/>
+    
+
+
+    <!-- http://www.webdatasem-project#Person -->
+
+    <owl:Class rdf:about="http://www.webdatasem-project#Person"/>
+    
+
+
+    <!-- http://www.webdatasem-project#Writer -->
+
+    <owl:Class rdf:about="http://www.webdatasem-project#Writer">
+        <rdfs:subClassOf rdf:resource="http://www.webdatasem-project#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.webdatasem-project#Action -->
+
+    <owl:NamedIndividual rdf:about="http://www.webdatasem-project#Action">
+        <rdf:type rdf:resource="http://www.webdatasem-project#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.webdatasem-project#Comedy -->
+
+    <owl:NamedIndividual rdf:about="http://www.webdatasem-project#Comedy">
+        <rdf:type rdf:resource="http://www.webdatasem-project#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.webdatasem-project#Crime -->
+
+    <owl:NamedIndividual rdf:about="http://www.webdatasem-project#Crime">
+        <rdf:type rdf:resource="http://www.webdatasem-project#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.webdatasem-project#Drama -->
+
+    <owl:NamedIndividual rdf:about="http://www.webdatasem-project#Drama">
+        <rdf:type rdf:resource="http://www.webdatasem-project#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.webdatasem-project#Female -->
+
+    <owl:NamedIndividual rdf:about="http://www.webdatasem-project#Female">
+        <rdf:type rdf:resource="http://www.webdatasem-project#Gender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.webdatasem-project#JohnTravolta -->
+
+    <owl:NamedIndividual rdf:about="http://www.webdatasem-project#JohnTravolta">
+        <rdf:type rdf:resource="http://www.webdatasem-project#Actor"/>
+        <hasGender rdf:resource="http://www.webdatasem-project#Male"/>
+        <isActorOf rdf:resource="http://www.webdatasem-project#PulpFiction"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">59</age>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Travolta</name>
+        <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American</nationality>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.webdatasem-project#KillBillVol1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.webdatasem-project#KillBillVol1">
+        <rdf:type rdf:resource="http://www.webdatasem-project#Movie"/>
+        <hasDirector rdf:resource="http://www.webdatasem-project#QuentinTarantino"/>
+        <hasGenre rdf:resource="http://www.webdatasem-project#Action"/>
+        <hasGenre rdf:resource="http://www.webdatasem-project#Crime"/>
+        <hasGenre rdf:resource="http://www.webdatasem-project#Thriller"/>
+        <hasWriter rdf:resource="http://www.webdatasem-project#QuentinTarantino"/>
+        <hasWriter rdf:resource="http://www.webdatasem-project#UmaThurman"/>
+        <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+        <language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</language>
+        <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kill Bill (volume 1)</title>
+        <year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2003</year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.webdatasem-project#Male -->
+
+    <owl:NamedIndividual rdf:about="http://www.webdatasem-project#Male">
+        <rdf:type rdf:resource="http://www.webdatasem-project#Gender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.webdatasem-project#PulpFiction -->
+
+    <owl:NamedIndividual rdf:about="http://www.webdatasem-project#PulpFiction">
+        <rdf:type rdf:resource="http://www.webdatasem-project#Movie"/>
+        <hasActor rdf:resource="http://www.webdatasem-project#JohnTravolta"/>
+        <hasActor rdf:resource="http://www.webdatasem-project#QuentinTarantino"/>
+        <hasActor rdf:resource="http://www.webdatasem-project#UmaThurman"/>
+        <hasDirector rdf:resource="http://www.webdatasem-project#QuentinTarantino"/>
+        <hasGenre rdf:resource="http://www.webdatasem-project#Crime"/>
+        <hasGenre rdf:resource="http://www.webdatasem-project#Thriller"/>
+        <hasWriter rdf:resource="http://www.webdatasem-project#QuentinTarantino"/>
+        <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+        <language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</language>
+        <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pulp Fiction</title>
+        <year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1994</year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.webdatasem-project#QuentinTarantino -->
+
+    <owl:NamedIndividual rdf:about="http://www.webdatasem-project#QuentinTarantino">
+        <rdf:type rdf:resource="http://www.webdatasem-project#Actor"/>
+        <rdf:type rdf:resource="http://www.webdatasem-project#Director"/>
+        <rdf:type rdf:resource="http://www.webdatasem-project#Writer"/>
+        <hasGender rdf:resource="http://www.webdatasem-project#Male"/>
+        <isActorOf rdf:resource="http://www.webdatasem-project#PulpFiction"/>
+        <isDirectorOf rdf:resource="http://www.webdatasem-project#KillBillVol1"/>
+        <isDirectorOf rdf:resource="http://www.webdatasem-project#PulpFiction"/>
+        <isWriterOf rdf:resource="http://www.webdatasem-project#KillBillVol1"/>
+        <isWriterOf rdf:resource="http://www.webdatasem-project#PulpFiction"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">53</age>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quentin Tarantino</name>
+        <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American</nationality>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.webdatasem-project#Thriller -->
+
+    <owl:NamedIndividual rdf:about="http://www.webdatasem-project#Thriller">
+        <rdf:type rdf:resource="http://www.webdatasem-project#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.webdatasem-project#UmaThurman -->
+
+    <owl:NamedIndividual rdf:about="http://www.webdatasem-project#UmaThurman">
+        <rdf:type rdf:resource="http://www.webdatasem-project#Actor"/>
+        <rdf:type rdf:resource="http://www.webdatasem-project#Writer"/>
+        <hasGender rdf:resource="http://www.webdatasem-project#Female"/>
+        <isActorOf rdf:resource="http://www.webdatasem-project#PulpFiction"/>
+        <isWriterOf rdf:resource="http://www.webdatasem-project#KillBillVol1"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">43</age>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uma Thurman</name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
