@@ -35,6 +35,7 @@ public class Jena1 {
         OntProperty age = model.getOntProperty(URI + "age");
         OntProperty nationality = model.getOntProperty(URI + "nationality");
 
+        System.out.println("List of persons:");
         for (ExtendedIterator<? extends OntResource> instances = person.listInstances(); instances.hasNext(); ) {
             OntResource inst = instances.next();
             if (inst.getProperty(nationality) != null) {

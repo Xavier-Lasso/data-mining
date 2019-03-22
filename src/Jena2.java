@@ -44,20 +44,21 @@ public class Jena2 {
 
         ResultSet results = qexec.execSelect();
         if(results.hasNext()) {
-            System.out.println("Has results.");
+            System.out.println("Results found.");
         }
         else {
-            System.out.println("No Results.");
+            System.out.println("No results found.");
         }
 
+        System.out.println("List of persons:");
         while(results.hasNext()) {
             QuerySolution sol = results.nextSolution();
-            Resource r = sol.getResource("person");
-            if (r.getProperty(nationality) != null) {
-                System.out.println(r.getProperty(name).getString() + ", " + r.getProperty(age).getString() + " years" + ", " + r.getProperty(nationality).getString());
+            Resource res = sol.getResource("person");
+            if (res.getProperty(nationality) != null) {
+                System.out.println(res.getProperty(name).getString() + ", " + res.getProperty(age).getString() + " years" + ", " + res.getProperty(nationality).getString());
             }
             else {
-                System.out.println(r.getProperty(name).getString() + ", " + r.getProperty(age).getString() + " years");
+                System.out.println(res.getProperty(name).getString() + ", " + res.getProperty(age).getString() + " years");
             }
         }
 
