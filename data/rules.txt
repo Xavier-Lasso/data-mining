@@ -1,0 +1,10 @@
+
+@prefix ns: <http://www.owl-ontologies.com/Ontology1322576720.owl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+[rule1: (?person  ns:isWriterOf ?movie )  -> (?per rdf:type ns:Writer) ]
+[rule2: (?person  ns:isDirectorOf ?movie )  -> (?per rdf:type ns:Director) ]
+[rule3: (?person  ns:isActorOf ?movie )  -> (?per rdf:type ns:Actor) ]
+
