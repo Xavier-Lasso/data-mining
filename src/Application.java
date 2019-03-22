@@ -87,7 +87,6 @@ public class Application {
         OntProperty year = model.getOntProperty(URI + "year");
         OntProperty country = model.getOntProperty(URI + "country");
         OntProperty hasGenre = model.getOntProperty(URI + "hasGenre");
-        OntProperty name = model.getOntProperty(URI + "name");
 
         System.out.println("List of movies with genre \"" + genre + "\":");
         for (ExtendedIterator<? extends OntResource> instances = movie.listInstances(); instances.hasNext(); ) {
