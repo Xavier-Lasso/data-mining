@@ -17,7 +17,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class Application {
-    private static final Logger logger = LogManager.getLogger(Jena1.class);
+    private static final Logger logger = LogManager.getLogger(Application.class);
 
     private static final String URI = "http://www.webdatasem-project#";
 
@@ -119,7 +119,7 @@ public class Application {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         boolean quit = false;
-        while (quit == false) {
+        while (!quit) {
             System.out.println("\nWhat do you want to do:");
             System.out.println("1 - Search movies with actors");
             System.out.println("2 - Search movies with directors");

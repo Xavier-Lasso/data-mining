@@ -12,7 +12,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class Jena4 {
-    private static final Logger logger = LogManager.getLogger(Jena1.class);
+    private static final Logger logger = LogManager.getLogger(Jena4.class);
 
     public static void main(String[] args) throws IOException {
         org.apache.log4j.BasicConfigurator.configure(new NullAppender());
